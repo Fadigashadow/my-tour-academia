@@ -1,44 +1,164 @@
 {
   "heroes": [
     {
+      "id": 1,
+      "name": "Momo Yaoyorozu",
+      "hero-name": "Creati",
+      "quirk": "Creation",
+      "gender": "F",
+      "hair-color": "Black"
+    },
+    {
+     "id": 2,
+      "name": "Tenya Ida",
+      "hero-name": "Ingenium",
+      "quirk": "Engine",
+      "gender": "M",
+      "hair-color": "Dark Blue"
+    },
+    {
+     "id": 3,
+      "name": "Katsuki Bakugo",
+      "hero-name": "Great Explosion Murder God Dynamight",
+      "quirk": "Explosion",
+      "gender": "M",
+      "hair-color": "Pale Wheat"
+    },
+    {
+      "id": 4,
+      "name": "Izuku Midoriya",
+      "hero-name": "Deku",
+      "quirk": "One For All",
+      "gender": "M",
+      "hair-color": "Sea Green"
+    },
+    {
+      "id": 5,
+      "name": "Shoto Todoroki",
+      "hero-name": "Shoto",
+      "quirk": "Half-Cold Half-Hot",
+      "gender": "M",
+      "hair-color": "White R, Crimson L"
+    },
+    {
+    "id": 6,
+      "name": "Tsuyu Asui",
+      "hero-name": "Froppy",
+      "quirk": "Frog",
+      "gender": "F",
+      "hair-color": "Dark Green"
+    },
+    {
+     "id": 7,
+      "name": "Kyoka Jiro",
+      "hero-name": "Earphone Jack",
+      "quirk": "Earphone Jack",
+      "gender": "F",
+      "hair-color": "Dark Slate Blue"
+    },
+    {
+    "id": 8,
+      "name": "Mashirao Ojiro",
+      "hero-name": "Tailman",
+      "quirk": "Tail",
+      "gender": "M",
+      "hair-color": "Khaki"
+    },
+    {
+    "id": 9,
+      "name": "Minoru Mineta",
+      "hero-name": "Grape Juice",
+      "quirk": "Pop Off",
+      "gender": "M",
+      "hair-color": "Rebecca Purple"
+    },
+    {
+     "id": 10,
+      "name": "Mezo Shoji",
+      "hero-name": "Tentacole",
+      "quirk": "Dupli-Arms",
+      "gender": "M",
+      "hair-color": "Gainsboro"
+    },
+    {
       "id": 11,
-      "name": "Dr Bad"
-    },
-    {
+       "name": "Koji Koda",
+       "hero-name": "Anima",
+       "quirk": "Anivoice",
+       "gender": "M",
+       "hair-color": ""
+     },
+     {
       "id": 12,
-      "name": "Narco"
-    },
-    {
+       "name": "Rikido Sato",
+       "hero-name": "Sugarman",
+       "quirk": "Sugar Rush",
+       "gender": "M",
+       "hair-color": "Saddle Brown"
+     },
+     {
       "id": 13,
-      "name": "Bombasto"
-    },
-    {
+       "name": "Ochaco Uraraka",
+       "hero-name": "Uravity",
+       "quirk": "Zero Gravity",
+       "gender": "F",
+       "hair-color": "Sienna"
+     },
+     {
       "id": 14,
-      "name": "Celeritas"
-    },
-    {
+       "name": "Fumikage Tokoyami",
+       "hero-name": "Tsukuyomi",
+       "quirk": "Dark Shadow",
+       "gender": "M",
+       "hair-color": "Black"
+     },
+     {
       "id": 15,
-      "name": "Magneta"
-    },
-    {
+      "name": "Eijiro Kirishima",
+      "hero-name": "Red Riot",
+      "quirk": "Hardening",
+      "gender": "M",
+      "hair-color": "Red"
+     },
+     {
       "id": 16,
-      "name": "RubberMan"
-    },
-    {
+      "name": "Toru Hagakure",
+      "hero-name": "Invisible Girl",
+      "quirk": "Invisibility",
+      "gender": "F",
+      "hair-color": ""
+     },
+     {
       "id": 17,
-      "name": "Dynama"
-    },
-    {
+      "name": "Hanta Sero",
+      "hero-name": "Cellophane",
+      "quirk": "Tape",
+      "gender": "M",
+      "hair-color": "Black"
+     },
+     {
       "id": 18,
-      "name": "Dr IQ"
-    },
-    {
+      "name": "Yuga Aoyama",
+      "hero-name": "Can't Stop Twinkling",
+      "quirk": "Navel Laser",
+      "gender": "M",
+      "hair-color": "Gold"
+     },
+     {
       "id": 19,
-      "name": "Magma"
-    },
-    {
+      "name": "Mina Ashido",
+      "hero-name": "Pinky",
+      "quirk": "Acid",
+      "gender": "F",
+      "hair-color": "Pink"
+     },
+     {
       "id": 20,
-      "name": "Tornado"
-    }
+      "name": "Denki Kaminari",
+      "hero-name": "Chargebolt",
+      "quirk": "Electrification",
+      "gender": "M",
+      "hair-color": "Gold"
+     }
   ]
 }
