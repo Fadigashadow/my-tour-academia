@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 /* Application-wide Styles */
 h1 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
+  color: seagreen;
+  font-family: 'Concert One', cursive;
+    font-size: 250%;
 }
 h2, h3 {
   color: #444;
@@ -19,5 +19,10 @@ body, input[type="text"], button {
 }
 /* everywhere else */
 * {
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  background-color: black;
 }
