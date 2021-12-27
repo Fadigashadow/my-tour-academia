@@ -1,8 +1,42 @@
-<h2>Top Heroes</h2>
-<div class="heroes-menu">
-  <a *ngFor="let hero of heroes"
-    routerLink="/detail/{{ hero.id }}">
-    {{ hero.name }}
-  </a>
+<div class="main-container">
+  <h2>Top Heroes</h2>
+  <div *ngIf=topHero 
+        class="main-container__top-hero">
+    <!-- <app-top-hero></app-top-hero> -->
+    <div class="top-hero__card-container">
+      <div class="card-container__card-header">
+        <h1 id="topId">{{ topHero.id }}</h1>
+        <div class="card-header__name-container">
+          <h2 id="topName"> {{ topHero.name | uppercase}}</h2>
+          <h3 id="topHeroName">{{ topHero.heroName }}</h3>
+        </div>
+      </div>
+      <div class="card-container__card-content">
+        <img>
+        <div class="card-content__content-container">
+          <div class="content-container__detail-container">
+            <label [ngClass]="{'detail-container__detail-label': true}" for="quirk">Quirk:</label>
+            <p>{{ topHero.quirk }}</p>
+          </div>
+          <div class="content-container__detail-container">
+            <label [ngClass]="{'detail-container__detail-label': true}" for="gender">Gender:</label>
+          <p>{{ topHero.gender }}</p>
+          </div>
+          <div class="content-container__detail-container">
+            <label [ngClass]="{'detail-container__detail-label': true}" for="hairColor">Hair Color:</label>
+          <p>{{ topHero.hairColor }}</p>
+          </div>
+        </div>  
+      </div>
+    </div>
+    <!-- New Component? -->
+  </div>
+  <div class="main-container__other-heroes">
+    <div *ngFor="let hero of heroes; let i = index" 
+          class="other-heroes__hero-container"
+          routerLink="/detail/{{ hero.id }}">
+      <h1 class="heroId">{{ hero.id }}</h1>
+      <h2 class="heroName"> {{ hero.name | uppercase}}</h2>
+    </div>
 </div>
 <app-hero-search></app-hero-search>

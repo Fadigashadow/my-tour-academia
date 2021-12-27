@@ -7,9 +7,11 @@ import { HeroService } from '../services/hero.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
+
 export class DashboardComponent implements OnInit {
 
   heroes: Hero[] = [];
+  topHero?: Hero;
 
   constructor(private heroService: HeroService) { }
 
@@ -21,6 +23,7 @@ export class DashboardComponent implements OnInit {
     this.heroService.getHeroes()
       .subscribe(heroes => {
         this.heroes = heroes.slice(1, 5);
+        this.topHero = heroes[0];
       })
   }
 

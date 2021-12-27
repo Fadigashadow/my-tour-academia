@@ -1,50 +1,113 @@
-/* DashboardComponent's private CSS styles */
-
 h2 {
   text-align: center;
+  font-size: 30pt;
+  color: seagreen;
 }
 
-.heroes-menu {
-  padding: 0;
-  margin: auto;
-  max-width: 1000px;
-
-  /* flexbox */
+.main-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.main-container__top-hero {
+  background-color: #2c2c2c;
+}
+
+.top-hero__card-container {
+  display: flex;
+  flex-direction: column;
+  outline: 2px solid whitesmoke;
+  border: 3px solid seagreen;
+  padding: 10px 20px;
+  gap: 0.5em;
+}
+
+.card-container__card-header {
+  display: flex;
+  gap: 20px
+}
+
+#topId {
+  text-shadow: -2px 0 whitesmoke, 0 2px whitesmoke, 2px 0 whitesmoke, 0 -2px whitesmoke;
+  color: crimson;
+  font-size: 50pt;
+}
+
+.card-header__name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#topName {
+  font-size: 24pt;
+  color: crimson;
+}
+
+#topHeroName {
+  font-style: italic;
+  font-size: 18pt;
+  color: rgba(245, 245, 245, 0.87)
+}
+
+.card-container__card-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-content__content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+.content-container__detail-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: rgba(245, 245, 245, 0.60)
+
+}
+
+.detail-container__detail-label {
+  font-size: 14pt;
+  color: rgba(245, 245, 245, 0.87);
+}
+
+.main-container__other-heroes {
+  display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
 }
 
-a {
-  background-color: #3f525c;
-  border-radius: 2px;
-  padding: 1rem;
-  font-size: 1.2rem;
-  text-decoration: none;
-  display: inline-block;
-  color: #fff;
-  text-align: center;
-  width: 100%;
-  min-width: 70px;
-  margin: .5rem auto;
-  box-sizing: border-box;
-
-  /* flexbox */
-  order: 0;
-  flex: 0 1 auto;
-  align-self: auto;
+.other-heroes__hero-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  background-color: #2c2c2c;
+  outline: 2px solid whitesmoke;
+  border: 3px solid seagreen;
+  padding: 10px;
 }
 
-@media (min-width: 600px) {
-  a {
-    width: 18%;
-    box-sizing: content-box;
-  }
+.heroId {
+  color: crimson;
+  text-shadow: -2px 0 whitesmoke, 0 2px whitesmoke, 2px 0 whitesmoke, 0 -2px whitesmoke;
+  padding-left: 5px;
 }
 
-a:hover {
-  background-color: #000;
+.heroName {
+  font-size: 20pt;
+  color: crimson;
+}
+
+.other-heroes__hero-container:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
