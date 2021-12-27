@@ -3,162 +3,162 @@
     {
       "id": 1,
       "name": "Momo Yaoyorozu",
-      "hero-name": "Creati",
+      "heroName": "Creati",
       "quirk": "Creation",
       "gender": "F",
-      "hair-color": "Black"
+      "hairColor": "Black"
     },
     {
      "id": 2,
       "name": "Tenya Ida",
-      "hero-name": "Ingenium",
+      "heroName": "Ingenium",
       "quirk": "Engine",
       "gender": "M",
-      "hair-color": "Dark Blue"
+      "hairColor": "Dark Blue"
     },
     {
      "id": 3,
       "name": "Katsuki Bakugo",
-      "hero-name": "Great Explosion Murder God Dynamight",
+      "heroName": "Great Explosion Murder God Dynamight",
       "quirk": "Explosion",
       "gender": "M",
-      "hair-color": "Pale Wheat"
+      "hairColor": "Pale Wheat"
     },
     {
       "id": 4,
       "name": "Izuku Midoriya",
-      "hero-name": "Deku",
+      "heroName": "Deku",
       "quirk": "One For All",
       "gender": "M",
-      "hair-color": "Sea Green"
+      "hairColor": "Sea Green"
     },
     {
       "id": 5,
       "name": "Shoto Todoroki",
-      "hero-name": "Shoto",
-      "quirk": "Half-Cold Half-Hot",
+      "heroName": "Shoto",
+      "quirk": "HalfCold Half-Hot",
       "gender": "M",
-      "hair-color": "White R, Crimson L"
+      "hairColor": "White R, Crimson L"
     },
     {
     "id": 6,
       "name": "Tsuyu Asui",
-      "hero-name": "Froppy",
+      "heroName": "Froppy",
       "quirk": "Frog",
       "gender": "F",
-      "hair-color": "Dark Green"
+      "hairColor": "Dark Green"
     },
     {
      "id": 7,
       "name": "Kyoka Jiro",
-      "hero-name": "Earphone Jack",
+      "heroName": "Earphone Jack",
       "quirk": "Earphone Jack",
       "gender": "F",
-      "hair-color": "Dark Slate Blue"
+      "hairColor": "Dark Slate Blue"
     },
     {
     "id": 8,
       "name": "Mashirao Ojiro",
-      "hero-name": "Tailman",
+      "heroName": "Tailman",
       "quirk": "Tail",
       "gender": "M",
-      "hair-color": "Khaki"
+      "hairColor": "Khaki"
     },
     {
     "id": 9,
       "name": "Minoru Mineta",
-      "hero-name": "Grape Juice",
+      "heroName": "Grape Juice",
       "quirk": "Pop Off",
       "gender": "M",
-      "hair-color": "Rebecca Purple"
+      "hairColor": "Rebecca Purple"
     },
     {
      "id": 10,
       "name": "Mezo Shoji",
-      "hero-name": "Tentacole",
+      "heroName": "Tentacole",
       "quirk": "Dupli-Arms",
       "gender": "M",
-      "hair-color": "Gainsboro"
+      "hairColor": "Gainsboro"
     },
     {
       "id": 11,
        "name": "Koji Koda",
-       "hero-name": "Anima",
+       "heroName": "Anima",
        "quirk": "Anivoice",
        "gender": "M",
-       "hair-color": ""
+       "hairColor": ""
      },
      {
       "id": 12,
        "name": "Rikido Sato",
-       "hero-name": "Sugarman",
+       "heroName": "Sugarman",
        "quirk": "Sugar Rush",
        "gender": "M",
-       "hair-color": "Saddle Brown"
+       "hairColor": "Saddle Brown"
      },
      {
       "id": 13,
        "name": "Ochaco Uraraka",
-       "hero-name": "Uravity",
+       "heroName": "Uravity",
        "quirk": "Zero Gravity",
        "gender": "F",
-       "hair-color": "Sienna"
+       "hairColor": "Sienna"
      },
      {
       "id": 14,
        "name": "Fumikage Tokoyami",
-       "hero-name": "Tsukuyomi",
+       "heroName": "Tsukuyomi",
        "quirk": "Dark Shadow",
        "gender": "M",
-       "hair-color": "Black"
+       "hairColor": "Black"
      },
      {
       "id": 15,
       "name": "Eijiro Kirishima",
-      "hero-name": "Red Riot",
+      "heroName": "Red Riot",
       "quirk": "Hardening",
       "gender": "M",
-      "hair-color": "Red"
+      "hairColor": "Red"
      },
      {
       "id": 16,
       "name": "Toru Hagakure",
-      "hero-name": "Invisible Girl",
+      "heroName": "Invisible Girl",
       "quirk": "Invisibility",
       "gender": "F",
-      "hair-color": ""
+      "hairColor": ""
      },
      {
       "id": 17,
       "name": "Hanta Sero",
-      "hero-name": "Cellophane",
+      "heroName": "Cellophane",
       "quirk": "Tape",
       "gender": "M",
-      "hair-color": "Black"
+      "hairColor": "Black"
      },
      {
       "id": 18,
       "name": "Yuga Aoyama",
-      "hero-name": "Can't Stop Twinkling",
+      "heroName": "Can't Stop Twinkling",
       "quirk": "Navel Laser",
       "gender": "M",
-      "hair-color": "Gold"
+      "hairColor": "Gold"
      },
      {
       "id": 19,
       "name": "Mina Ashido",
-      "hero-name": "Pinky",
+      "heroName": "Pinky",
       "quirk": "Acid",
       "gender": "F",
-      "hair-color": "Pink"
+      "hairColor": "Pink"
      },
      {
       "id": 20,
       "name": "Denki Kaminari",
-      "hero-name": "Chargebolt",
+      "heroName": "Chargebolt",
       "quirk": "Electrification",
       "gender": "M",
-      "hair-color": "Gold"
+      "hairColor": "Gold"
      }
   ]
 }
