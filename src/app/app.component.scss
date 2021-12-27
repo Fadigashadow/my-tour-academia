@@ -2,6 +2,7 @@
 .nav-bar {
   display: grid;
   grid-template-columns: 4fr 1fr;
+  gap: 1vw;
 }
 
 .nav-bar__left {
@@ -15,12 +16,11 @@
   justify-content: flex-end;
   align-items: center;
   gap: 1em;
-  margin-right: 5vw
+  margin-right: 4vw
 }
 
 h1 {
   margin-bottom: 0;
-  
 }
 
 .tour-color{
@@ -32,15 +32,13 @@ nav a {
   padding: 1rem;
   text-decoration: none;
   margin-top: 10px;
-  background-color: #e8e8e8;
-  color: #3d3d3d;
-  border-radius: 4px;
+  background-color: #2c2c2c;
+  outline: 2px solid whitesmoke;
+  border: 3px solid seagreen;
+  color: seagreen;
+  border-radius: 5px;
 }
 
-nav a:hover {
-  color: white;
-  background-color: #42545C;
-}
-nav a.active {
-  background-color: black;
+a:active{
+  background-color: #474747;
 }
