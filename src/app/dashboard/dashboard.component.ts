@@ -37,15 +37,6 @@ export class DashboardComponent implements OnInit {
       })
   }
 
-  teste(imageParam: string, nameParam: string): void {
-
-    const CLEAN_IMAGE = this.transform(imageParam);
-    const CLEAN_NAME = this.getLastName(nameParam);
-    if (CLEAN_IMAGE === CLEAN_NAME) {
-      console.log(true);
-    }
-  }
-
   getLastName(fullName: string) {
     const LAST_NAME_ARR = fullName.split(" ");
     let lastName = LAST_NAME_ARR[LAST_NAME_ARR.length - 1]
