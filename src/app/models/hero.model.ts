@@ -5,4 +5,5 @@ export interface Hero {
   quirk: string;
   gender: string;
   hairColor: string;
+  image: string;
 }
