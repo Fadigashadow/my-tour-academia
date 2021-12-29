@@ -27,7 +27,7 @@
         </div>
         <div class="content-container__detail-container">
           <label [ngClass]="{ 'detail-container__detail-label': true }" for="gender">Gender:</label>
-          <p>{{ hero.gender }}</p>
+          <p>{{ hero.gender | parseGender }}</p>
         </div>
         <div *ngIf="hero.hairColor" class="content-container__detail-container">
           <label [ngClass]="{ 'detail-container__detail-label': true }" for="hairColor">Hair Color:</label>
@@ -63,7 +63,7 @@
         </div>
         <div class="content-container__detail-container">
           <label [ngClass]="{ 'detail-container__detail-label': true }" for="gender">Gender:</label>
-          <p>{{ hero.gender }}</p>
+          <p>{{ hero.gender | parseGender}}</p>
         </div>
         <div class="content-container__detail-container">
           <label [ngClass]="{ 'detail-container__detail-label': true }" for="hairColor">Hair Color:</label>
