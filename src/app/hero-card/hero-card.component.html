@@ -1,0 +1,62 @@
+<div [ngSwitch]="type">
+  <div *ngSwitchCase="'detail'" class="top-hero__card-container">
+    <div class="card-container__card-header">
+      <h1 [ngClass]="{'first': color === 'gold',
+                    'second': color === 'silver',
+                    'third': color === 'bronze',
+                    'default': color === hero!.hairColor}" id="topId">{{ hero!.id }}</h1>
+      <div class="card-header__name-container">
+        <h2 id="topName"> {{ hero!.name | uppercase}}</h2>
+        <h3 id="topHeroName">{{ hero!.heroName }}</h3>
+      </div>
+    </div>
+    <div class="card-container__card-content">
+        <img *ngIf="haveImage" width="150px" height="150px" [src]=hero!.image/>
+        <img *ngIf="!haveImage" width="150px" height="150px" src="./assets/images/blitzcrank.png">
+      <div class="card-content__content-container">
+        <div class="content-container__detail-container">
+          <label [ngClass]="{'detail-container__detail-label': true}" for="quirk">Quirk:</label>
+          <p>{{ hero!.quirk }}</p>
+        </div>
+        <div class="content-container__detail-container">
+          <label [ngClass]="{'detail-container__detail-label': true}" for="gender">Gender:</label>
+          <p>{{ hero!.gender }}</p>
+        </div>
+        <div class="content-container__detail-container">
+          <label [ngClass]="{'detail-container__detail-label': true}" for="hairColor">Hair Color:</label>
+          <p>{{ hero!.hairColor }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngSwitchCase="'dashboard'" class="top-hero__card-container">
+    <div class="card-container__card-header">
+      <h1 [ngClass]="{'first': color === 'gold'}" id="topId">{{ hero!.id }}</h1>
+      <div class="card-header__name-container">
+        <h2 id="topName"> {{ hero!.name | uppercase}}</h2>
+        <h3 id="topHeroName">{{ hero!.heroName }}</h3>
+      </div>
+    </div>
+    <div class="card-container__card-content">
+      <div *ngIf="haveImage">
+        <img width="150px" height="150px" [src]=hero!.image/>
+      </div>
+      <div *ngIf="!haveImage">
+        <img width="150px" height="150px" src="./assets/images/blitzcrank.png">
+      </div>
+      <div class="card-content__content-container">
+        <div class="content-container__detail-container">
+          <label [ngClass]="{'detail-container__detail-label': true}" for="quirk">Quirk:</label>
+          <p>{{ hero!.quirk }}</p>
+        </div>
+        <div class="content-container__detail-container">
+          <label [ngClass]="{'detail-container__detail-label': true}" for="gender">Gender:</label>
+          <p>{{ hero!.gender }}</p>
+        </div>
+        <div class="content-container__detail-container">
+          <label [ngClass]="{'detail-container__detail-label': true}" for="hairColor">Hair Color:</label>
+          <p>{{ hero!.hairColor }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
