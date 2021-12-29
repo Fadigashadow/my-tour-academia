@@ -1,9 +1,3 @@
-h2 {
-  text-align: center;
-  font-size: 30pt;
-  color: seagreen;
-}
-
 .main-container {
   display: flex;
   flex-direction: column;
@@ -37,6 +31,7 @@ h2 {
 
 .heroName {
   font-size: 20pt;
+  text-shadow: -1px 0 #adadad, 0 1px #adadad, 1px 0 #adadad, 0 -1px #adadad;
 }
 
 .other-heroes__hero-container:hover {
@@ -44,15 +39,19 @@ h2 {
   cursor: pointer;
 }
 
-.default {
-  color: red
+.second {
+  color: silver !important
 }
 
-.second {
-  color: silver
+.second-border {
+  border: 3px solid silver;
 }
 
 .third {
-  color: #cd7f32
+  color: #cd7f32 !important
+}
+
+.third-border {
+  border: 3px solid #cd7f32;
 }
 
