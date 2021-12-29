@@ -5,6 +5,7 @@
 .top-hero__card-container {
   display: flex;
   flex-direction: column;
+  background-color: #2c2c2c;
   outline: 2px solid whitesmoke;
   border: 3px solid seagreen;
   padding: 10px 20px;
@@ -31,7 +32,7 @@
 
 #topName {
   font-size: 24pt;
-  color: crimson;
+  text-shadow: -1px 0 #adadad, 0 1px #adadad, 1px 0 #adadad, 0 -1px #adadad;
 }
 
 #topHeroName {
@@ -70,9 +71,26 @@
 }
 
 .first {
-  color: #D4AF37;
+  color: #D4AF37 !important;
+}
+
+.first-border {
+  border: 3px solid #d4af37;
 }
 
 .second {
-  color: silver;
+  color: silver !important;
 }
+
+.second-border {
+  border: 3px solid silver;
+}
+
+.third {
+  color: #cd7f32 !important
+}
+
+.third-border {
+  border: 3px solid #cd7f32;
+}
+

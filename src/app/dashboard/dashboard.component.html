@@ -2,23 +2,24 @@
   <h2>Top Heroes</h2>
   <div *ngIf=topHero
         class="main-container__top-hero">
-    <app-hero-card [allHeroes]="allHeroes"
-                    type="dashboard"
-                    [hero]="topHero">
-    </app-hero-card>
+    <app-hero-card [allHeroes]="allHeroes" type="dashboard" [hero]="topHero"></app-hero-card>
   </div>
   <div class="main-container__other-heroes">
     <div *ngFor="let hero of heroes; let i = index"
-          class="other-heroes__hero-container"
-          routerLink="/detail/{{ hero.id }}">
-      <h1 [ngStyle]="{'color': hero.hairColor}" [ngClass]="{'second': color === 'silver',
-                      'third': color === 'bronze',
-                      'default': color,
+          [ngClass]="{'second-border': hero.id === 2,
+                      'third-border': hero.id === 3,
                       'heroId': true}"
+          class="other-heroes__hero-container"
+          routerLink="/detail/{{ hero.id }}"
+          >
+      <h1 [ngClass]="{'second': hero.id === 2,
+                      'third': hero.id === 3,
+                      'heroId': true}"
+                      [ngStyle]="{'color': colors[i].color}"
                       >
                       {{ hero.id }}
       </h1>
-      <h2 class="heroName"> {{ hero.name | uppercase}}</h2>
+      <h2 [ngStyle]="{'color': colors[i].color}" class="heroName"> {{ hero.name | uppercase }}</h2>
     </div>
 </div>
 <app-hero-search></app-hero-search>
