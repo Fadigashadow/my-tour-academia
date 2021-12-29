@@ -1,8 +1,8 @@
 <div *ngIf="hero" class="main-container">
-  <h2>{{ hero.name | uppercase }} Details</h2>
+  <h2>Hero Details</h2>
   <app-hero-card type="detail" [hero]="hero"></app-hero-card>
   <div class="main-container__button-container">
-    <button (click)="goBack()">go back</button>
-    <button (click)="save()">save</button>
+    <button (click)="goBack()">GO BACK</button>
+    <button (click)="save()">SAVE</button>
   </div>
 </div>
