@@ -24,7 +24,7 @@
       "heroName": "Great Explosion Murder God Dynamight",
       "quirk": "Explosion",
       "gender": "M",
-      "hairColor": "Pale Wheat",
+      "hairColor": "Wheat",
       "image": "./assets/images/heroes/bakugo.png"
     },
     {
@@ -40,9 +40,9 @@
       "id": 5,
       "name": "Shoto Todoroki",
       "heroName": "Shoto",
-      "quirk": "HalfCold Half-Hot",
+      "quirk": "Half-Cold Half-Hot",
       "gender": "M",
-      "hairColor": "White R, Crimson L",
+      "hairColor": "Crimson, White",
       "image": "./assets/images/heroes/todoroki.png"
     },
     {
