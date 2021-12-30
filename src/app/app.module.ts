@@ -13,6 +13,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { HeroCardComponent } from './hero-card/hero-card.component';
 import { ParseGenderPipe } from './pipes/parse-gender.pipe';
 import { OppositeGenderPipe } from './pipes/opposite-gender.pipe';
+import { ParseColorPipe } from './pipes/parse_color/parse-color.pipe';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { OppositeGenderPipe } from './pipes/opposite-gender.pipe';
     HeroCardComponent,
     ParseGenderPipe,
     OppositeGenderPipe,
+    ParseColorPipe,
   ],
   imports: [
     BrowserModule,
