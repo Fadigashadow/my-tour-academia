@@ -1,5 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Hero } from '../models/hero.model';
+import { HeroService } from '../services/hero.service';
+import { Location } from '@angular/common';
+
+
 
 @Component({
   selector: 'app-hero-card',
@@ -16,10 +20,12 @@ export class HeroCardComponent implements OnInit {
   @Input() type!: string;
   colors = [{ color: "" }];
 
-  constructor() { }
+  constructor(
+    private heroService: HeroService,
+    private location: Location) { }
 
   ngOnInit(): void {
-    this.cleanImage = this.transform(this.hero.image);
+    this.cleanImage = this.cleanImageUrl(this.hero.image);
     this.cleanName = this.getLastName(this.hero.name);
     if(this.cleanImage === this.cleanName) {
       this.haveImage = true;
@@ -36,7 +42,7 @@ export class HeroCardComponent implements OnInit {
     return lastName;
   }
 
-  transform(imageUrl: string): string {
+  cleanImageUrl(imageUrl: string): string {
     const urlArray = imageUrl.split("/");
     const name = urlArray[urlArray.length - 1].split(".")[0];
     return name;
@@ -44,8 +50,8 @@ export class HeroCardComponent implements OnInit {
 
   checkColor(hero: Hero): void {
 
-    console.log(this.colors);
     let haveMultipleColors = hero.hairColor.search(/[,]/gi)
+
     if (haveMultipleColors !== -1) {
       const AUX_ARR = hero.hairColor.split(", ");
       this.colors[0] = { 'color': this.parseColor(AUX_ARR[0]) }
@@ -55,12 +61,10 @@ export class HeroCardComponent implements OnInit {
       // })
     } else if (hero.hairColor === "") {
         this.colors[0] = { 'color': '#2c2c2c'}
-        console.log(hero.name)
+
     } else {
     this.colors[0] = {"color": this.parseColor(hero.hairColor) };
     }
-
-
 
     // heroes.forEach((hero, i) => {
     //   let haveMultipleColors = hero.hairColor.search(/[,]/gi)
@@ -85,6 +89,18 @@ export class HeroCardComponent implements OnInit {
     let parsedColor = color.replace(/[ ,]/gi, "").toLowerCase();
 
     return parsedColor
+  }
+
+  save(): void {
+    console.log(this.hero)
+    if(this.hero){
+      this.heroService.updateHero(this.hero)
+      .subscribe(() => this.goBack());
+    }
+  }
+
+   goBack(): void {
+    this.location.back();
   }
 
 }

@@ -1,41 +1,92 @@
 <div [ngSwitch]="type">
-  <div *ngSwitchCase="'detail'"
-        class="top-hero__card-container"
-        [ngClass]="{'first-border': hero.id === 1,
-                    'second-border': hero.id === 2,
-                    'third-border':  hero.id === 3
-                    }">
-    <div class="card-container__card-header">
-      <h1 [ngClass]="{'first': hero.id === 1,
-                    'second': hero.id === 2,
-                    'third':  hero.id === 3
-                    }" id="topId"
-                    [ngStyle]="{ 'color': colors[0].color }">{{ hero.id }}
-      </h1>
-      <div class="card-header__name-container">
-        <h2 id="topName" [ngStyle]="{ 'color': colors[0].color }"> {{ hero.name | uppercase}}</h2>
-        <h3 id="topHeroName">{{ hero.heroName }}</h3>
+  <div *ngSwitchCase="'detail'" class="main-container__top-hero">
+    <div class="top-hero__card-container"
+          [ngClass]="{'first-border': hero.id === 1,
+                      'second-border': hero.id === 2,
+                      'third-border':  hero.id === 3
+                      }">
+      <div class="card-container__card-header">
+        <h1 [ngClass]="{'first': hero.id === 1,
+                        'second': hero.id === 2,
+                        'third':  hero.id === 3
+                      }" id="topId"
+                      [ngStyle]="{ 'color': colors[0].color }">
+          {{ hero.id }}
+        </h1>
+        <div class="card-header__name-container">
+          <h2 id="topName" [ngStyle]="{ 'color': colors[0].color }"> {{ hero.name | uppercase}}</h2>
+          <h3 id="topHeroName">{{ hero.heroName }}</h3>
+        </div>
       </div>
-    </div>
-    <div class="card-container__card-content">
+      <div class="card-container__card-content">
         <img *ngIf="haveImage" width="150px" height="150px" [src]=hero.image/>
         <img *ngIf="!haveImage" width="150px" height="150px" src="./assets/images/blitzcrank.png">
-      <div class="card-content__content-container">
-        <div class="content-container__detail-container">
-          <label [ngClass]="{ 'detail-container__detail-label': true }" for="quirk">Quirk:</label>
-          <p>{{ hero.quirk }}</p>
+        <div class="card-content__content-container">
+          <div class="content-container__detail-container">
+            <label [ngClass]="{ 'detail-container__detail-label': true }" for="quirk">Quirk:</label>
+            <p>{{ hero.quirk }}</p>
+          </div>
+          <div class="content-container__detail-container">
+            <label [ngClass]="{ 'detail-container__detail-label': true }" for="gender">Gender:</label>
+            <p>{{ hero.gender | parseGender }}</p>
+          </div>
+          <div *ngIf="hero.hairColor" class="content-container__detail-container">
+            <label [ngClass]="{ 'detail-container__detail-label': true }" for="hairColor">Hair Color:</label>
+            <p>{{ hero.hairColor }}</p>
+          </div>
         </div>
-        <div class="content-container__detail-container">
-          <label [ngClass]="{ 'detail-container__detail-label': true }" for="gender">Gender:</label>
-          <p>{{ hero.gender | parseGender }}</p>
+      </div>
+    </div>
+        <!-- SECOND CONTAINER -->
+    <div class="top-hero__card-container"
+      [ngClass]="{'first-border': hero.id === 1,
+                  'second-border': hero.id === 2,
+                  'third-border':  hero.id === 3
+                  }">
+      <div class="card-container__card-header">
+        <h1 [ngClass]="{'first': hero.id === 1,
+                        'second': hero.id === 2,
+                        'third':  hero.id === 3
+                      }" id="topId"
+            [ngStyle]="{ 'color': colors[0].color }">
+            ID: {{ hero.id }}
+        </h1>
+      </div>
+      <div class="card-container__card-content">
+        <div class="card-content__content-container">
+          <div class="content-container__detail-container">
+            <label [ngClass]="{ 'detail-container__detail-label': true }" for="name">Name:</label>
+            <input [value]=hero.name>
+          </div>
+          <div class="content-container__detail-container">
+            <label [ngClass]="{ 'detail-container__detail-label': true }" for="heroName">Hero Name:</label>
+            <input [value]=hero.heroName>
+          </div>
+          <div class="content-container__detail-container">
+            <label [ngClass]="{ 'detail-container__detail-label': true }" for="quirk">Quirk:</label>
+            <input [value]=hero.quirk>
+          </div>
+          <div class="content-container__detail-container">
+            <label [ngClass]="{ 'detail-container__detail-label': true }" for="gender">Gender:</label>
+            <select name=gender>
+              <option>{{ hero.gender }}</option>
+              <option>{{ hero.gender | oppositeGender }}</option>
+              <option>NB</option>
+            </select>
+          </div>
+          <div *ngIf="hero.hairColor" class="content-container__detail-container">
+            <label [ngClass]="{ 'detail-container__detail-label': true }" for="hairColor">Hair Color:</label>
+            <input  [value]="hero.hairColor">
+          </div>
         </div>
-        <div *ngIf="hero.hairColor" class="content-container__detail-container">
-          <label [ngClass]="{ 'detail-container__detail-label': true }" for="hairColor">Hair Color:</label>
-          <p>{{ hero.hairColor }}</p>
-        </div>
+      </div>
+      <div class="card-container__button-container">
+        <button (click)="goBack()">GO BACK</button>
+        <button (click)="save()">SAVE</button>
       </div>
     </div>
   </div>
+  <!-- DASHBOARD  -->
   <div *ngSwitchCase="'dashboard'"
         [ngClass]="{'first-border': hero.id === 1,
                     'second-border': hero.id === 2,
