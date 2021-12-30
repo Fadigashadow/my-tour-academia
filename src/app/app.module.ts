@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { HeroCardComponent } from './hero-card/hero-card.component';
 import { ParseGenderPipe } from './pipes/parse-gender.pipe';
+import { OppositeGenderPipe } from './pipes/opposite-gender.pipe';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ParseGenderPipe } from './pipes/parse-gender.pipe';
     HeroSearchComponent,
     HeroCardComponent,
     ParseGenderPipe,
+    OppositeGenderPipe,
   ],
   imports: [
     BrowserModule,
