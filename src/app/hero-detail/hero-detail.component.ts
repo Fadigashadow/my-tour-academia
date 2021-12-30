@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Hero } from '../models/hero.model';
 import { HeroService } from '../services/hero.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-hero-detail',
@@ -15,8 +16,9 @@ export class HeroDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private heroService: HeroService
-    ) { }
+    private heroService: HeroService,
+    private location: Location
+  ) { }
 
   ngOnInit(): void {
     this.getHero();
@@ -28,5 +30,17 @@ export class HeroDetailComponent implements OnInit {
       .subscribe(hero => {
         this.hero = hero;
       });
+  }
+
+  save(): void {
+    console.log(this.hero)
+    if(this.hero){
+      this.heroService.updateHero(this.hero)
+      .subscribe(() => this.goBack());
+    }
+  }
+
+   goBack(): void {
+    this.location.back();
   }
 }
