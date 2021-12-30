@@ -21,11 +21,6 @@ export class DashboardComponent implements OnInit {
     this.getHeroes();
   }
 
-  // ngDoCheck(): void {
-  //   console.log(this.heroes)
-
-  // }
-
   getHeroes(): void {
 
     this.heroService.getHeroes()
@@ -49,7 +44,7 @@ export class DashboardComponent implements OnInit {
         //   this.colors[i] = { [j]: color };
         // })
       }
-      else{
+      else {
         this.colors[i] = { 'color': this.parseColor(hero.hairColor) };
       }
 
@@ -67,14 +62,3 @@ export class DashboardComponent implements OnInit {
   }
 
 }
-
-
-colors: [
-  {
-    '0': "colorName"
-  },
-  {
-    '0': "colorName",
-    '1': "colorName"
-  }
-]
