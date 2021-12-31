@@ -41,6 +41,15 @@ nav a {
   width: max-content;
 }
 
+nav a:hover {
+  transform: scale(1.1);
+}
+
+nav .selected-page {
+  background-color: seagreen;
+  color: rgba(255, 255, 255, 0.87);
+}
+
 @media screen and (max-width: 1170px) {
 
   .nav-bar {
