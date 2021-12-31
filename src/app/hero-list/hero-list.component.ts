@@ -16,10 +16,4 @@ export class HeroListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  consoleLog(hero: Hero) {
-
-    console.log(hero)
-  }
-
 }
