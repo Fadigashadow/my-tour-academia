@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
@@ -14,6 +13,8 @@ import { HeroCardComponent } from './hero-card/hero-card.component';
 import { ParseGenderPipe } from './pipes/parse-gender.pipe';
 import { OppositeGenderPipe } from './pipes/opposite-gender.pipe';
 import { ParseColorPipe } from './pipes/parse_color/parse-color.pipe';
+import { HeroListComponent } from './hero-list/hero-list.component';
+import { JrSwitchCasesDirective } from './directives/jr-switch-cases.directive';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,8 @@ import { ParseColorPipe } from './pipes/parse_color/parse-color.pipe';
     ParseGenderPipe,
     OppositeGenderPipe,
     ParseColorPipe,
+    HeroListComponent,
+    JrSwitchCasesDirective,
   ],
   imports: [
     BrowserModule,
