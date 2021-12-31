@@ -1,0 +1,37 @@
+<div class="main-container">
+  <h2>Add Hero</h2>
+  <div class="top-hero__card-container">
+    <div class="card-container__card-content">
+      <div class="card-content__content-container">
+        <div class="content-container__detail-container">
+          <label [ngClass]="{ 'detail-container__detail-label': true }" for="name">Name:</label>
+          <input [(ngModel)]="hero.name" placeholder="Toshinori Yagi">
+        </div>
+        <div class="content-container__detail-container">
+          <label [ngClass]="{ 'detail-container__detail-label': true }" for="heroName">Alias:</label>
+          <input [(ngModel)]="hero.heroName" placeholder="All Might">
+        </div>
+        <div class="content-container__detail-container">
+          <label [ngClass]="{ 'detail-container__detail-label': true }" for="quirk">Quirk:</label>
+          <input [(ngModel)]="hero.quirk" placeholder="One For All">
+        </div>
+        <div class="content-container__detail-container">
+          <label [ngClass]="{ 'detail-container__detail-label': true }" for="gender">Gender:</label>
+          <select [(ngModel)]="hero.gender" name=gender>
+            <option>M</option>
+            <option>F</option>
+            <option>NB</option>
+          </select>
+        </div>
+        <div class="content-container__detail-container">
+          <label [ngClass]="{ 'detail-container__detail-label': true }" for="hairColor">Hair Color:</label>
+          <input [(ngModel)]="hero.hairColor" placeholder="Gold">
+        </div>
+      </div>
+    </div>
+    <div class="card-container__button-container">
+      <button (click)="goBack()">Go Back</button>
+      <button (click)="addHero()">Add</button>
+    </div>
+  </div>
+</div>

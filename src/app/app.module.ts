@@ -15,6 +15,7 @@ import { OppositeGenderPipe } from './pipes/opposite-gender.pipe';
 import { ParseColorPipe } from './pipes/parse_color/parse-color.pipe';
 import { HeroListComponent } from './hero-list/hero-list.component';
 import { JrSwitchCasesDirective } from './directives/jr-switch-cases.directive';
+import { HeroAddComponent } from './hero-add/hero-add.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { JrSwitchCasesDirective } from './directives/jr-switch-cases.directive';
     ParseColorPipe,
     HeroListComponent,
     JrSwitchCasesDirective,
+    HeroAddComponent,
   ],
   imports: [
     BrowserModule,
