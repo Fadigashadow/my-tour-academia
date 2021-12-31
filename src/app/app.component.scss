@@ -1,14 +1,16 @@
 /* AppComponent's private CSS styles */
 .nav-bar {
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 3fr 1fr;
   gap: 1vw;
+  margin-bottom: 1em;
 }
 
 .nav-bar__left {
   display: flex;
-  gap: 1em;
   align-items: center;
+  gap: 1vw;
+  text-align: center;
 }
 
 .nav-bar__right {
@@ -16,7 +18,6 @@
   justify-content: flex-end;
   align-items: center;
   gap: 1em;
-  margin-right: 4vw
 }
 
 h1 {
@@ -37,8 +38,45 @@ nav a {
   color: seagreen;
   font-size: 16pt;
   border-radius: 5px;
+  width: max-content;
 }
 
-a:active{
-  background-color: #474747;
+@media screen and (max-width: 1170px) {
+
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    gap: 1em;
+    margin: auto, auto;
+    margin-bottom: 2em;
+  }
+
+  h1 {
+    font-size: 40pt;
+  }
+}
+
+@media screen and (max-width: 740px) {
+
+  h1 {
+    font-size: 36pt;
+  }
+
+  img {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+
+  nav a {
+    padding: .5em
+  }
+
+  .nav-bar__left {
+    margin: 0 10vw;
+  }
 }

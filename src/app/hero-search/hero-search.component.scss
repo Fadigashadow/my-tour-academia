@@ -5,7 +5,7 @@ li {
 .search-component__search-box {
   display: flex;
   gap: 1em;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .search-box__search-title {
@@ -36,9 +36,21 @@ li {
   color: rgba(255, 255, 255, 0.87);
 }
 
-
-
 ul.search-result {
   margin-top: 0;
   padding-left: 0;
+}
+
+@media screen and (max-width: 490px) {
+
+  .search-box__search-title {
+    font-size: 20pt;
+  }
+}
+
+@media screen and (max-width: 490px) {
+
+  .search-box__search-title {
+    font-size: 16pt;
+  }
 }

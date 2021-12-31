@@ -1,10 +1,11 @@
 input, select {
   font-size: 16px;
-  max-width: 130px;
+  min-width: 50px;
+  max-width: 140px;
   text-align: center;
   background-color: #2c2c2c;
   color: rgba(255, 255, 255, 0.87);
-  padding: 4px 0;
+  padding: 4px 5px;
 }
 
 .main-container {
@@ -76,7 +77,7 @@ input, select {
 .card-content__content-container {
   display: flex;
   flex-direction: column;
-  gap: 0.2em;
+  gap: 0.5em;
 }
 
 .content-container__detail-container {

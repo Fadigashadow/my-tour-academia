@@ -32,3 +32,10 @@ body, input[type="text"], button {
 html {
   background-color: #121212;
 }
+
+@media screen and (max-width: 490px) {
+
+  body {
+    margin: 0;
+  }
+}
