@@ -10,7 +10,6 @@ import { Hero } from '../models/hero.model';
 export class HeroCardComponent implements OnInit {
 
   @Input() hero!: Hero;
-  @Input() allHeroes: Hero[] = [];
   cleanImage!: string;
   cleanName!: string;
   haveImage!: boolean;
