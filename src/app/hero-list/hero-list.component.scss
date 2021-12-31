@@ -1,0 +1,57 @@
+.main-container__other-heroes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.other-heroes__hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2c2c2c;
+  gap: 1em;
+  outline: 2px solid whitesmoke;
+  padding: 10px;
+  margin: 0.7em;
+  min-width: 250px;
+}
+
+.heroId {
+  text-shadow: -2px 0 whitesmoke, 0 2px whitesmoke, 2px 0 whitesmoke, 0 -2px whitesmoke;
+  padding-left: 5px;
+}
+
+.heroName {
+  font-size: 20pt;
+  text-shadow: -1px 0 #adadad, 0 1px #adadad, 1px 0 #adadad, 0 -1px #adadad;
+}
+
+.other-heroes__hero-container:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.first {
+  color: #d4af37 !important;
+}
+
+.first-border {
+  border: 3px solid #d4af37 !important;
+}
+
+.second {
+  color: silver !important;
+}
+
+.second-border {
+  border: 3px solid silver !important;
+}
+
+.third {
+  color: #cd7f32 !important
+}
+
+.third-border {
+  border: 3px solid #cd7f32 !important;
+}

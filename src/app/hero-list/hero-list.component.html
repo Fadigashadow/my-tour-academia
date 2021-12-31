@@ -1,0 +1,54 @@
+<div *ngIf="heroes">
+  <div [ngSwitch]="type">
+    <div *ngSwitchCase="'dashboard'" class="main-container__other-heroes">
+      <div *ngFor="let hero of heroes; let i = index">
+        <div [ngSwitch]="hero.id" >
+          <div *jrSwitchCases="[2, 3, 4, 5]"
+              [ngClass]="{'second-border': hero.id === 2,
+                          'third-border': hero.id === 3,
+                          'heroId': true }"
+              [ngStyle]="{ 'border': '3px solid transparent',
+                          'border-image': 'linear-gradient(135deg, ' + ( hero | parseColor ) + ', ' + ( hero | parseColor: 1 ) + ')',
+                          'border-image-slice': '1' }"
+              class="other-heroes__hero-container"
+              routerLink="/detail/{{ hero.id }}"
+          >
+            <h1 [ngClass]="{'second': hero.id === 2,
+                            'third': hero.id === 3,
+                            'heroId': true}"
+                [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }">
+              {{ hero.id }}
+            </h1>
+            <h2 [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }"
+                class="heroName"> {{ hero.name | uppercase }}
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngSwitchCase="'hero-list'" class="main-container__other-heroes">
+      <div *ngFor="let hero of heroes; let i = index"
+              [ngClass]="{'first-border': hero.id === 1,
+                          'second-border': hero.id === 2,
+                          'third-border': hero.id === 3,
+                          'heroId': true }"
+              [ngStyle]="{ 'border': '3px solid transparent',
+                          'border-image': 'linear-gradient(135deg, ' + ( hero | parseColor ) + ', ' + ( hero | parseColor: 1 ) + ')',
+                          'border-image-slice': '1' }"
+              class="other-heroes__hero-container"
+              routerLink="/detail/{{ hero.id }}"
+      >
+        <h1 [ngClass]="{ 'first': hero.id === 1,
+                        'second': hero.id === 2,
+                        'third': hero.id === 3,
+                        'heroId': true }"
+            [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }">
+          {{ hero.id }}
+        </h1>
+        <h2 [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }"
+          class="heroName"> {{ hero.name | uppercase }}
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
