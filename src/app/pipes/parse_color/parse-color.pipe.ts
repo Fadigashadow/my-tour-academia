@@ -8,18 +8,18 @@ export class ParseColorPipe implements PipeTransform {
 
   transform(hero: Hero, index?: number, type?: string): Array<string> | string {
 
-    let haveMultipleColors = hero.hairColor.search(/[,]/gi)
+    let haveMultipleColors = hero.hairColor!.search(/[,]/gi)
     let colorArr = [];
 
     if (haveMultipleColors !== -1) {
-      colorArr = hero.hairColor.split(", ");
+      colorArr = hero.hairColor!.split(", ");
 
     }
     else if (hero.hairColor === "") {
       colorArr.push('#2c2c2c');
     }
     else {
-      colorArr.push(hero.hairColor);
+      colorArr.push(hero.hairColor!);
       index = 0;
     }
 

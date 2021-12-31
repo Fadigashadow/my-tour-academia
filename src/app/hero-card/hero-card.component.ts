@@ -18,7 +18,7 @@ export class HeroCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.cleanImage = this.cleanImageUrl(this.hero.image);
+    this.cleanImage = this.cleanImageUrl(this.hero.image!);
     this.cleanName = this.getLastName(this.hero.name);
 
     if(this.cleanImage === this.cleanName) {

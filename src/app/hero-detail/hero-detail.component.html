@@ -21,33 +21,32 @@
             >
             ID: {{ hero.id }}
         </h1>
-
       </div>
       <div class="card-container__card-content">
         <div class="card-content__content-container">
           <div class="content-container__detail-container">
             <label [ngClass]="{ 'detail-container__detail-label': true }" for="name">Name:</label>
-            <input [value]=hero.name>
+            <input [(ngModel)]="hero.name" [value]=hero.name>
           </div>
           <div class="content-container__detail-container">
             <label [ngClass]="{ 'detail-container__detail-label': true }" for="heroName">Hero Name:</label>
-            <input [value]=hero.heroName>
+            <input [(ngModel)]="hero.heroName" [value]=hero.heroName>
           </div>
           <div class="content-container__detail-container">
             <label [ngClass]="{ 'detail-container__detail-label': true }" for="quirk">Quirk:</label>
-            <input [value]=hero.quirk>
+            <input [(ngModel)]="hero.quirk" [value]=hero.quirk>
           </div>
           <div class="content-container__detail-container">
             <label [ngClass]="{ 'detail-container__detail-label': true }" for="gender">Gender:</label>
-            <select name=gender>
-              <option>{{ hero.gender }}</option>
-              <option>{{ hero.gender | oppositeGender }}</option>
+            <select [(ngModel)]="hero.gender" name=gender>
+              <option>M</option>
+              <option>F</option>
               <option>NB</option>
             </select>
           </div>
           <div *ngIf="hero.hairColor" class="content-container__detail-container">
             <label [ngClass]="{ 'detail-container__detail-label': true }" for="hairColor">Hair Color:</label>
-            <input  [value]="hero.hairColor">
+            <input [(ngModel)]="hero.hairColor" [value]="hero.hairColor">
           </div>
         </div>
       </div>
