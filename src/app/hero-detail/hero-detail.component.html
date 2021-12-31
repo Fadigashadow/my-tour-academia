@@ -3,19 +3,15 @@
   <div class="main-container__content-container">
     <app-hero-card type="detail" [hero]="hero"></app-hero-card>
     <div class="top-hero__card-container"
-      [ngClass]="{'first-border': hero.id === 1,
-                  'second-border': hero.id === 2,
-                  'third-border':  hero.id === 3
+      [ngClass]="{ 'first-border': hero.id === 1,
+                   'second-border': hero.id === 2,
+                   'third-border':  hero.id === 3
                   }"
-                 [ngStyle]="{ 'border': '3px solid transparent',
-                              'border-image': 'linear-gradient(135deg, ' + ( hero | parseColor ) + ', ' + ( hero | parseColor: 1 ) + ')',
-                              'border-image-slice': '1' }"
+      [ngStyle]="{ 'border-image': 'linear-gradient(135deg, ' + ( hero | parseColor ) + ', ' + ( hero | parseColor: 1 ) + ')',
+                   'border-image-slice': '1' }"
       >
       <div class="card-container__card-header">
-        <h1 [ngClass]="{'first': hero.id === 1,
-                        'second': hero.id === 2,
-                        'third':  hero.id === 3
-                      }" id="topId"
+        <h1 class="font-shadow"
             [ngStyle]="{'color': hero | parseColor: 0: 'string'}"
             >
             ID: {{ hero.id }}
@@ -24,19 +20,19 @@
       <div class="card-container__card-content">
         <div class="card-content__content-container">
           <div class="content-container__detail-container">
-            <label [ngClass]="{ 'detail-container__detail-label': true }" for="name">Name:</label>
+            <label class='detail-container__detail-label' for="name">Name:</label>
             <input [(ngModel)]="hero.name" [value]=hero.name>
           </div>
           <div class="content-container__detail-container">
-            <label [ngClass]="{ 'detail-container__detail-label': true }" for="heroName">Hero Name:</label>
+            <label class='detail-container__detail-label' for="heroName">Hero Name:</label>
             <input [(ngModel)]="hero.heroName" [value]=hero.heroName>
           </div>
           <div class="content-container__detail-container">
-            <label [ngClass]="{ 'detail-container__detail-label': true }" for="quirk">Quirk:</label>
+            <label class='detail-container__detail-label' for="quirk">Quirk:</label>
             <input [(ngModel)]="hero.quirk" [value]=hero.quirk>
           </div>
           <div class="content-container__detail-container">
-            <label [ngClass]="{ 'detail-container__detail-label': true }" for="gender">Gender:</label>
+            <label class='detail-container__detail-label' for="gender">Gender:</label>
             <select [(ngModel)]="hero.gender" name=gender>
               <option>M</option>
               <option>F</option>
@@ -44,15 +40,25 @@
             </select>
           </div>
           <div *ngIf="hero.hairColor" class="content-container__detail-container">
-            <label [ngClass]="{ 'detail-container__detail-label': true }" for="hairColor">Hair Color:</label>
+            <label class='detail-container__detail-label' for="hairColor">Hair Color:</label>
             <input [(ngModel)]="hero.hairColor" [value]="hero.hairColor">
           </div>
         </div>
       </div>
       <div class="card-container__button-container">
-        <button (click)="goBack()">GO BACK</button>
-        <button (click)="save()">SAVE</button>
+        <button [ngStyle]="{ 'border-image': 'linear-gradient(135deg, ' + ( hero | parseColor ) + ', ' + ( hero | parseColor: 1 ) + ')',
+                             'border-image-slice': '1' }"
+                (click)="goBack()">
+                GO BACK
+        </button>
+        <button [ngStyle]="{ 'border-image': 'linear-gradient(135deg, ' + ( hero | parseColor ) + ', ' + ( hero | parseColor: 1 ) + ')',
+                             'border-image-slice': '1' }"
+                (click)="save()">
+                SAVE
+        </button>
       </div>
     </div>
   </div>
 </div>
+
+<!-- 'color': hero | parseColor: 0: 'string' -->

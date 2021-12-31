@@ -8,6 +8,21 @@ input, select {
   padding: 4px 5px;
 }
 
+button {
+  width: max-content;
+  background-color: #2c2c2c;
+  color: rgba(255, 255, 255, 0.87);
+  outline: 2px solid whitesmoke;
+  border-radius: 5px;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -57,6 +72,10 @@ input, select {
   text-shadow: -1px 0 #adadad, 0 1px #adadad, 1px 0 #adadad, 0 -1px #adadad;
 }
 
+.font-shadow {
+  text-shadow: -1px 0 #adadad, 0 1px #adadad, 1px 0 #adadad, 0 -1px #adadad;
+}
+
 #topHeroName {
   font-style: italic;
   font-size: 18pt;
@@ -99,6 +118,11 @@ input, select {
   align-items: center;
   gap: 1em;
   margin: 20px 0;
+}
+
+.dinamic-border {
+  border: 3px solid transparent;
+  border-image-slice: 1;
 }
 
 .first {
