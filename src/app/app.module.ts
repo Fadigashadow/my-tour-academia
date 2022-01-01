@@ -15,6 +15,7 @@ import { ParseColorPipe } from './pipes/parse_color/parse-color.pipe';
 import { HeroListComponent } from './hero-list/hero-list.component';
 import { JrSwitchCasesDirective } from './directives/jr-switch-cases.directive';
 import { HeroAddComponent } from './hero-add/hero-add.component';
+import { DivideNamePipe } from './pipes/divide-name/divide-name.pipe';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { HeroAddComponent } from './hero-add/hero-add.component';
     HeroListComponent,
     JrSwitchCasesDirective,
     HeroAddComponent,
+    DivideNamePipe,
   ],
   imports: [
     BrowserModule,
