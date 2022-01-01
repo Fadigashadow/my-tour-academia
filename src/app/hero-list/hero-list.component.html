@@ -8,8 +8,9 @@
                           'third-border': hero.id === 3,
                           'heroId': true }"
               [ngStyle]="{ 'border': '3px solid transparent',
-                          'border-image': 'linear-gradient(135deg, ' + ( hero | parseColor ) + ', ' + ( hero | parseColor: 1 ) + ')',
-                          'border-image-slice': '1' }"
+                           'border-image': 'linear-gradient(135deg, ' + ( hero | parseColor ) + ', ' + ( hero | parseColor: 1 ) + ')',
+                           'border-image-slice': '1',
+                           'justify-content': 'center' }"
               class="other-heroes__hero-container"
               routerLink="/detail/{{ hero.id }}"
           >
@@ -20,7 +21,7 @@
               {{ hero.id }}
             </h1>
             <h2 [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }"
-                class="heroName"> {{ hero.name | uppercase }}
+                class="name-no-break"> {{ hero.name | uppercase }}
             </h2>
           </div>
         </div>

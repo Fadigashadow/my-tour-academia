@@ -35,6 +35,11 @@
   width: 150px;
 }
 
+.name-no-break {
+  font-size: 20pt;
+  text-shadow: -1px 0 #adadad, 0 1px #adadad, 1px 0 #adadad, 0 -1px #adadad;
+}
+
 .other-heroes__hero-container:hover {
   transform: scale(1.05);
   cursor: pointer;
