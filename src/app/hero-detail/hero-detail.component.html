@@ -11,10 +11,13 @@
                    'border-image-slice': '1' }"
       >
       <div class="card-container__card-header">
-        <h1 class="font-shadow"
-            [ngStyle]="{'color': hero | parseColor: 0: 'string'}"
-            >
-            ID: {{ hero.id }}
+        <h1 class="font-shadow">
+            <span [ngStyle]="{'color': hero | parseColor: 0: 'string'}">
+              ID:
+            </span>
+            <span [ngStyle]="{'color': hero | parseColor: 1: 'string'}">
+              {{ hero.id }}
+            </span>
         </h1>
       </div>
       <div class="card-container__card-content">
@@ -40,7 +43,9 @@
             </select>
           </div>
           <div *ngIf="hero.hairColor" class="content-container__detail-container">
-            <label class='detail-container__detail-label' for="hairColor">Hair Color:</label>
+            <label class='detail-container__detail-label' for="hairColor">
+              Hair Color:
+            </label>
             <input [(ngModel)]="hero.hairColor" [value]="hero.hairColor">
           </div>
         </div>
