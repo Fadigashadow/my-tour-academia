@@ -17,6 +17,7 @@ export class ParseColorPipe implements PipeTransform {
     }
     else if (hero.hairColor === "") {
       colorArr.push('#2c2c2c');
+      colorArr.push('#2c2c2c');
     }
     else {
       colorArr.push(hero.hairColor!);
@@ -54,10 +55,6 @@ export class ParseColorPipe implements PipeTransform {
     })
 
     parsedColors = parsedColors.filter((color) => parsedColors[index] == color);
-
-    if (parsedColors.length === 1) {
-      parsedColors.push(parsedColors[0]);
-    }
 
     return parsedColors;
   }
