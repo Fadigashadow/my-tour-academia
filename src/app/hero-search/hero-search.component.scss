@@ -43,14 +43,8 @@ ul.search-result {
 
 @media screen and (max-width: 490px) {
 
-  .search-box__search-title {
-    font-size: 20pt;
-  }
-}
-
-@media screen and (max-width: 490px) {
-
-  .search-box__search-title {
-    font-size: 16pt;
+  .search-component__search-box {
+    flex-direction: column;
+    gap: .5em;
   }
 }
