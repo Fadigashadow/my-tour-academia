@@ -38,16 +38,19 @@
               class="other-heroes__hero-container"
               routerLink="/detail/{{ hero.id }}"
       >
-        <h1 [ngClass]="{ 'first': hero.id === 1,
-                        'second': hero.id === 2,
-                        'third': hero.id === 3,
-                        'heroId': true }"
-            [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }">
-          {{ hero.id }}
-        </h1>
-        <h2 [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }"
-          class="heroName"> {{ hero.name | uppercase }}
-        </h2>
+        <div class="hero-container__text-container">
+          <h1 [ngClass]="{ 'first': hero.id === 1,
+                          'second': hero.id === 2,
+                          'third': hero.id === 3,
+                          'heroId': true }"
+              [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }">
+            {{ hero.id }}
+          </h1>
+          <h2 [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }"
+              class="heroName"> {{ hero.name | uppercase }}
+          </h2>
+        </div>
+        <button class="delete" (click)="delHero(hero)">X</button>
       </div>
     </div>
   </div>
