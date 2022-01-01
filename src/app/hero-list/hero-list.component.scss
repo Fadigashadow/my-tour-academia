@@ -8,28 +8,49 @@
 .other-heroes__hero-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   background-color: #2c2c2c;
-  gap: 1em;
   outline: 2px solid whitesmoke;
   padding: 10px;
   margin: 0.7em;
   min-width: 250px;
+  gap: 1em;
+}
+
+.hero-container__text-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
 
 .heroId {
   text-shadow: -2px 0 whitesmoke, 0 2px whitesmoke, 2px 0 whitesmoke, 0 -2px whitesmoke;
-  padding-left: 5px;
+  margin-left: 5px;
 }
 
 .heroName {
   font-size: 20pt;
   text-shadow: -1px 0 #adadad, 0 1px #adadad, 1px 0 #adadad, 0 -1px #adadad;
+  overflow-wrap: break-word;
+  width: 150px;
 }
 
 .other-heroes__hero-container:hover {
   transform: scale(1.05);
   cursor: pointer;
+}
+
+.delete {
+  background-color: crimson;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.delete:hover {
+  transform: scale(1.1);
+  font-size: 17px;
 }
 
 .first {
