@@ -20,8 +20,13 @@
                 [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }">
               {{ hero.id }}
             </h1>
-            <h2 [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }"
-                class="name-no-break"> {{ hero.name | uppercase }}
+            <h2 class="name-no-break">
+              <span [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }">
+                {{ hero.name | divideName | uppercase}}
+              </span>
+              <span [ngStyle]="{ 'color': hero | parseColor: 1: 'string' }">
+                {{ hero.name | divideName: 1 | uppercase}}
+              </span>
             </h2>
           </div>
         </div>
@@ -47,8 +52,13 @@
               [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }">
             {{ hero.id }}
           </h1>
-          <h2 [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }"
-              class="heroName"> {{ hero.name | uppercase }}
+          <h2 class="heroName">
+            <span [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }">
+              {{ hero.name | divideName | uppercase}}
+            </span>
+            <span [ngStyle]="{ 'color': hero | parseColor: 1: 'string' }">
+              {{ hero.name | divideName: 1 | uppercase}}
+            </span>
           </h2>
         </div>
         <button class="delete" (click)="delHero(hero)">X</button>
