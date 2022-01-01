@@ -20,7 +20,14 @@
           {{ hero.id }}
         </h1>
         <div class="card-header__name-container">
-          <h2 id="topName" [ngStyle]="{ 'color': hero | parseColor: 0 : 'string'}"> {{ hero.name | uppercase }}</h2>
+          <h2 id="topName">
+            <span [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }">
+              {{ hero.name | divideName | uppercase}}
+            </span>
+            <span [ngStyle]="{ 'color': hero | parseColor: 1: 'string' }">
+              {{ hero.name | divideName: 1 | uppercase}}
+            </span>
+          </h2>
           <h3 id="topHeroName">{{ hero.heroName }}</h3>
         </div>
       </div>
@@ -53,7 +60,14 @@
     <div class="card-container__card-header">
       <h1 [ngClass]="{ 'first': hero.id === 1 }" id="topId">{{ hero.id }}</h1>
       <div class="card-header__name-container">
-        <h2 id="topName" [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }"> {{ hero.name | uppercase }}</h2>
+        <h2 id="topName">
+          <span [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }">
+            {{ hero.name | divideName | uppercase}}
+          </span>
+          <span [ngStyle]="{ 'color': hero | parseColor: 1: 'string' }">
+            {{ hero.name | divideName: 1 | uppercase}}
+          </span>
+        </h2>
         <h3 id="topHeroName">{{ hero.heroName }}</h3>
       </div>
     </div>
