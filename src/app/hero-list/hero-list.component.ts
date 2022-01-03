@@ -11,7 +11,6 @@ import { HeroService } from '../services/hero.service';
 export class HeroListComponent implements OnInit {
 
   @Input() heroes!: Hero[];
-  @Input() type!: string;
 
   constructor(private heroService: HeroService) { }
 

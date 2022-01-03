@@ -16,6 +16,7 @@ import { HeroListComponent } from './hero-list/hero-list.component';
 import { JrSwitchCasesDirective } from './directives/jr-switch-cases.directive';
 import { HeroAddComponent } from './hero-add/hero-add.component';
 import { DivideNamePipe } from './pipes/divide-name/divide-name.pipe';
+import { TopHeroesComponent } from './top-heroes/top-heroes.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { DivideNamePipe } from './pipes/divide-name/divide-name.pipe';
     JrSwitchCasesDirective,
     HeroAddComponent,
     DivideNamePipe,
+    TopHeroesComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,8 @@
 <div class="main-container">
   <h2>Top Heroes</h2>
-  <div *ngIf=topHero
-        class="main-container__top-hero">
-    <app-hero-card [type]="'dashboard'" [hero]="topHero"></app-hero-card>
+  <div *ngIf="topHero" class="main-container__top-hero">
+    <app-hero-card [hero]="topHero"></app-hero-card>
   </div>
-  <app-hero-list [type]="'dashboard'" [heroes]="allHeroes"></app-hero-list>
+  <app-top-heroes [topHeroes]="heroes"></app-top-heroes>
   <app-hero-search></app-hero-search>
 </div>

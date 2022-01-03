@@ -1,0 +1,31 @@
+<div *ngIf="topHeroes" class="main-container__other-heroes">
+  <div *ngFor="let hero of topHeroes; let i = index">
+    <div class="other-heroes__hero-container"
+        [ngClass]="{ 'first-border': hero.id === 1,
+                      'second-border': hero.id === 2,
+                      'third-border': hero.id === 3 }"
+        [ngStyle]="{ 'border': '3px solid transparent',
+                      'border-image': 'linear-gradient(135deg, ' + ( hero | parseColor ) + ', ' + ( hero | parseColor: 1 ) + ')',
+                      'border-image-slice': '1' }"
+        routerLink="/detail/{{ hero.id }}"
+    >
+      <div class="hero-container__text-container">
+        <h1 [ngClass]="{ 'first': hero.id === 1,
+                          'second': hero.id === 2,
+                          'third': hero.id === 3,
+                          'heroId': true }"
+            [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }">
+          {{ hero.id }}
+        </h1>
+        <h2 class="heroName">
+          <span [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }">
+            {{ hero.name | divideName | uppercase}}
+          </span>
+          <span [ngStyle]="{ 'color': hero | parseColor: 1: 'string' }">
+            {{ hero.name | divideName: 1 | uppercase}}
+          </span>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
