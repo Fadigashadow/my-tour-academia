@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Hero } from '../models/hero.model';
 
 @Component({
@@ -13,9 +14,8 @@ export class HeroCardComponent implements OnInit {
   cleanImage!: string;
   cleanName!: string;
   haveImage!: boolean;
-  @Input() type!: string;
 
-  constructor() { }
+  constructor( public router: Router) { }
 
   ngOnInit(): void {
     this.cleanImage = this.cleanImageUrl(this.hero.image!);

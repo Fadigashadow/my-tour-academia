@@ -1,7 +1,7 @@
 <div *ngIf="hero" class="main-container">
   <h2>Hero Details</h2>
   <div class="main-container__content-container">
-    <app-hero-card type="detail" [hero]="hero"></app-hero-card>
+    <app-hero-card [hero]="hero"></app-hero-card>
     <div class="top-hero__card-container"
       [ngClass]="{ 'first-border': hero.id === 1,
                    'second-border': hero.id === 2,
@@ -65,5 +65,3 @@
     </div>
   </div>
 </div>
-
-<!-- 'color': hero | parseColor: 0: 'string' -->

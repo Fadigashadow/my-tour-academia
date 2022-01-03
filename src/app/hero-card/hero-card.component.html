@@ -1,101 +1,60 @@
-<div [ngSwitch]="type">
-      <!-- DETAILS  -->
-  <div *ngSwitchCase="'detail'" class="content-container__top-hero">
-    <div class="top-hero__card-container"
-          [ngClass]="{ 'first-border': hero.id === 1,
-                        'second-border': hero.id === 2,
-                        'third-border':  hero.id === 3 }"
-          [ngStyle]="{ 'border': '3px solid transparent',
-                       'border-image': 'linear-gradient(135deg, ' + ( hero | parseColor ) + ', ' + ( hero | parseColor: 1 ) + ')',
-                       'border-image-slice': '1' }"
-      >
-      <div class="card-container__card-header">
-        <h1 [ngClass]="{ 'first': hero.id === 1,
-                         'second': hero.id === 2,
-                         'third':  hero.id === 3
-                      }"
-            id="topId"
-            [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }"
-                      >
-          {{ hero.id }}
-        </h1>
-        <div class="card-header__name-container">
-          <h2 id="topName">
-            <span [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }">
-              {{ hero.name | divideName | uppercase}}
-            </span>
-            <span [ngStyle]="{ 'color': hero | parseColor: 1: 'string' }">
-              {{ hero.name | divideName: 1 | uppercase}}
-            </span>
-          </h2>
-          <h3 id="topHeroName">{{ hero.heroName }}</h3>
-        </div>
-      </div>
-      <div class="card-container__card-content">
-        <img *ngIf="haveImage" width="150px" height="150px" [src]="hero.image">
-        <img *ngIf="!haveImage" width="150px" height="150px" src="./assets/images/blitzcrank.png">
-        <div class="card-content__content-container">
-          <div class="content-container__detail-container">
-            <label [ngClass]="{ 'detail-container__detail-label': true }" for="quirk">Quirk:</label>
-            <p>{{ hero.quirk }}</p>
-          </div>
-          <div class="content-container__detail-container">
-            <label [ngClass]="{ 'detail-container__detail-label': true }" for="gender">Gender:</label>
-            <p>{{ hero.gender | parseGender }}</p>
-          </div>
-          <div *ngIf="hero.hairColor" class="content-container__detail-container">
-            <label [ngClass]="{ 'detail-container__detail-label': true }" for="hairColor">Hair Color:</label>
-            <p>{{ hero.hairColor }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-     <!-- DASHBOARD  -->
-  <div *ngSwitchCase="'dashboard'"
+<div class="content-container__top-hero">
+  <div class="top-hero__card-container"
         [ngClass]="{ 'first-border': hero.id === 1,
-                     'second-border': hero.id === 2,
-                     'third-border': hero.id === 3,
-                     'top-hero__card-container': true }">
+                      'second-border': hero.id === 2,
+                      'third-border':  hero.id === 3 }"
+        [ngStyle]="{ 'border': '3px solid transparent',
+                     'border-image': 'linear-gradient(135deg, ' + ( hero | parseColor ) + ', ' + ( hero | parseColor: 1 ) + ')',
+                     'border-image-slice': '1' }"
+    >
     <div class="card-container__card-header">
-      <h1 [ngClass]="{ 'first': hero.id === 1 }" id="topId">{{ hero.id }}</h1>
+      <h1 [ngClass]="{ 'first': hero.id === 1,
+                       'second': hero.id === 2,
+                       'third':  hero.id === 3
+                    }"
+          id="topId"
+          [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }"
+      >
+        {{ hero.id }}
+      </h1>
       <div class="card-header__name-container">
         <h2 id="topName">
           <span [ngStyle]="{ 'color': hero | parseColor: 0: 'string' }">
-            {{ hero.name | divideName | uppercase}}
+            {{ hero.name | divideName | uppercase }}
           </span>
           <span [ngStyle]="{ 'color': hero | parseColor: 1: 'string' }">
-            {{ hero.name | divideName: 1 | uppercase}}
+            {{ hero.name | divideName: 1 | uppercase }}
           </span>
         </h2>
         <h3 id="topHeroName">{{ hero.heroName }}</h3>
       </div>
     </div>
     <div class="card-container__card-content">
-      <div *ngIf="haveImage">
-        <img width="150px" height="150px" [src]="hero.image"/>
-      </div>
-      <div *ngIf="!haveImage">
-        <img width="150px" height="150px" src="./assets/images/blitzcrank.png">
-      </div>
+      <img *ngIf="haveImage" width="150px" height="150px" [src]="hero.image">
+      <img *ngIf="!haveImage" width="150px" height="150px" src="./assets/images/blitzcrank.png">
       <div class="card-content__content-container">
         <div class="content-container__detail-container">
-          <label class='detail-container__detail-label' for="quirk">Quirk:</label>
+          <label class="detail-container__detail-label" for="quirk">Quirk:</label>
           <p>{{ hero.quirk }}</p>
         </div>
         <div class="content-container__detail-container">
-          <label class='detail-container__detail-label' for="gender">Gender:</label>
+          <label class="detail-container__detail-label" for="gender">Gender:</label>
           <p>{{ hero.gender | parseGender }}</p>
         </div>
-        <div class="content-container__detail-container">
-          <label class='detail-container__detail-label' for="hairColor">Hair Color:</label>
+        <div *ngIf="hero.hairColor" class="content-container__detail-container">
+          <label class="detail-container__detail-label" for="hairColor">Hair Color:</label>
           <p>{{ hero.hairColor }}</p>
         </div>
       </div>
     </div>
-    <div class="card-container__button-container">
+    <div *ngIf="this.router.url ==='/dashboard'" class="card-container__button-container">
       <button routerLink="/detail/{{ hero.id }}"
-              [ngStyle]="{ 'border': '3px solid #d4af37' }">
+              [ngClass]="{ 'first-border': hero.id === 1,
+                           'second-border': hero.id === 2,
+                           'third-border':  hero.id === 3 }"
+              [ngStyle]="{ 'border': '3px solid transparent',
+                           'border-image': 'linear-gradient(135deg, ' + ( hero | parseColor ) + ', ' + ( hero | parseColor: 1 ) + ')',
+                           'border-image-slice': '1' }">
               DETAILS
       </button>
     </div>
