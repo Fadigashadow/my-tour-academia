@@ -1,9 +1,5 @@
 import { NgModule } from '@angular/core';
-import { HeroesComponent } from './heroes/heroes.component';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { HeroAddComponent } from './hero-add/hero-add.component';
 
 const routes: Routes = [
   {
@@ -13,20 +9,12 @@ const routes: Routes = [
   },
   {
     path: 'heroes',
-    component: HeroesComponent
+    loadChildren: () => import('./modules/heroes/heroes.module').then(m => m.HeroesModule)
   },
   {
     path: 'dashboard',
-    component: DashboardComponent,
+    loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)
   },
-  {
-    path: 'detail/:id',
-    component: HeroDetailComponent,
-  },
-  {
-    path: 'addHero',
-    component: HeroAddComponent,
-  }
 ]
 
 @NgModule({

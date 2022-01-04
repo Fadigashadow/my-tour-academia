@@ -8,7 +8,7 @@
           [ngStyle]="{ 'border': '3px solid transparent',
                         'border-image': 'linear-gradient(135deg, ' + ( hero | parseColor ) + ', ' + ( hero | parseColor: 1 ) + ')',
                         'border-image-slice': '1' }"
-          routerLink="/detail/{{ hero.id }}"
+          routerLink="/heroes/detail/{{ hero.id }}"
       >
         <div class="hero-container__text-container">
           <h1 [ngClass]="{ 'first': hero.id === 1,

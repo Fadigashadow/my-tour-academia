@@ -48,7 +48,7 @@
       </div>
     </div>
     <div *ngIf="this.router.url ==='/dashboard'" class="card-container__button-container">
-      <button routerLink="/detail/{{ hero.id }}"
+      <button routerLink="/heroes/detail/{{ hero.id }}"
               [ngClass]="{ 'first-border': hero.id === 1,
                            'second-border': hero.id === 2,
                            'third-border':  hero.id === 3 }"

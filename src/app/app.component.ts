@@ -6,18 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
-  // isSelected = false;
-  title = 'Tour of Heroes';
-
-  // changeSelected() {
-  //   this.isSelected = !this.isSelected;
-  // }
-
-  // checkSelected() {
-  //   this.changeSelected();
-  //   return this.isSelected? 'selected': ''
-  // }
-
-
+  title = 'Tour of Heroes'
 }
