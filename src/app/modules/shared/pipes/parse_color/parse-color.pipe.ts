@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Hero } from 'src/app/models/hero.model';
+import { Hero } from 'src/app/core/models/hero.model';
 
 @Pipe({
   name: 'parseColor'
